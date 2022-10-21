@@ -5,6 +5,11 @@ html {
   height: 100%;
 }
 
+p, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   width: 100%;
   height: 100%;
@@ -57,12 +62,16 @@ body {
 }
 
 #contentDiv {
-  box-sizing: border-box;
   max-width: 900px;
   margin: auto;
-  padding: 49px 10px 58px 166px;
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 900px) {
+  #contentDiv {
+    padding: 49px 10px 58px 166px;
+  }
 }
 
 input {
