@@ -3,8 +3,7 @@ html {
 }
 
 body {
-  max-width: 1000px;
-  margin: auto;
+  width: 100%;
 }
 
 .flexbox {
@@ -22,15 +21,10 @@ body {
   margin-right: 18px;
   vertical-align: top;
 
-  background: url(https://yastatic.net/s3/home-static/_/Y/m/iYFGil-w8xoq_2OQvnXq6EwLY.svg) 50% 50% no-repeat;
+  background: url(img/iYFGil-w8xoq_2OQvnXq6EwLY.svg) 50% 50% no-repeat;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-.centered {
-  justify-content: center;
-  align-items: center;
 }
 
 .expanded {
@@ -54,11 +48,14 @@ body {
 }
 
 #contentDiv {
-  min-height: 500px;
+  box-sizing: border-box;
+  max-width: 900px;
+  /* width: 70%; */
+  margin: auto;
   padding: 49px 10px 58px 166px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-content: center;
 }
 
 input {
@@ -118,11 +115,10 @@ footer a, footer a:visited {
 }
 
 .serviceItem {
-  /* margin-bottom: 8px; */
   flex: 1 1 25px;
 }
 
-.servicesCol {
+/* .servicesCol {
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -131,6 +127,14 @@ footer a, footer a:visited {
   padding: 0 16px 0 0;
   vertical-align: top;
   height: 100px;
+} */
+
+.servicesCol {
+  display: grid;
+  list-style: none;
+  padding: 0 16px 0 0;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 #topLine {
@@ -139,8 +143,8 @@ footer a, footer a:visited {
 }
 
 .servicesIcon {
-  width: 16px;
-  height: 19px;
+  max-width: 16px;
+  max-height: 19px;
   margin: 0 9px 0 2px;
   vertical-align: text-bottom;
   background-repeat: no-repeat;
